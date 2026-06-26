@@ -258,14 +258,11 @@ function ExpenseTrackerApp() {
       <div className="top-cards-row">
         {/* Wallet Balance Card */}
         <div className="top-card-col">
-          <div className="glass-card wallet-card">
-            <div className="card-header-flex">
-              <h2 className="card-label">Wallet Balance</h2>
-              <div className="card-avatar wallet-avatar"><WalletIcon /></div>
-            </div>
-            {/* Prominent display of balance matching requirements */}
+          <div className="glass-card wallet-card" style={{ position: 'relative' }}>
+            <h2 className="card-label">Wallet Balance</h2>
+            <div className="card-avatar wallet-avatar" style={{ position: 'absolute', top: 24, right: 24 }}><WalletIcon /></div>
             <h2 className="card-value" style={{ margin: '8px 0 16px 0' }}>
-              Wallet Balance: ${balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ${balance}
             </h2>
             <button 
               type="button" 
@@ -279,13 +276,11 @@ function ExpenseTrackerApp() {
 
         {/* Expenses Card */}
         <div className="top-card-col">
-          <div className="glass-card expense-card">
-            <div className="card-header-flex">
-              <h2 className="card-label">Expenses</h2>
-              <div className="card-avatar expense-avatar"><TrendingDownIcon /></div>
-            </div>
+          <div className="glass-card expense-card" style={{ position: 'relative' }}>
+            <h2 className="card-label">Expenses</h2>
+            <div className="card-avatar expense-avatar" style={{ position: 'absolute', top: 24, right: 24 }}><TrendingDownIcon /></div>
             <h2 className="card-value" style={{ margin: '8px 0 16px 0', color: '#f43f5e' }}>
-              Expenses: ${totalExpenses.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ${totalExpenses}
             </h2>
             <button 
               type="button" 
@@ -299,13 +294,11 @@ function ExpenseTrackerApp() {
 
         {/* Net Savings Card */}
         <div className="top-card-col">
-          <div className="glass-card net-card">
-            <div className="card-header-flex">
-              <h2 className="card-label">Net Balance</h2>
-              <div className="card-avatar net-avatar"><TrendingUpIcon /></div>
-            </div>
+          <div className="glass-card net-card" style={{ position: 'relative' }}>
+            <h2 className="card-label">Net Balance</h2>
+            <div className="card-avatar net-avatar" style={{ position: 'absolute', top: 24, right: 24 }}><TrendingUpIcon /></div>
             <h2 className="card-value" style={{ margin: '8px 0 16px 0', color: balance >= 0 ? '#10b981' : '#f43f5e' }}>
-              Net Balance: ${balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ${balance}
             </h2>
             <p style={{ margin: '16px 0 0 0', fontSize: '0.85rem', color: '#94a3b8' }}>
               Net liquidity after accounting for current expenses
