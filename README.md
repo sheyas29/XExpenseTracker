@@ -69,10 +69,3 @@ This project strictly adheres to specific E2E test requirements:
 - Correct button types (`type="button"` for triggers, `type="submit"` for forms).
 - Persistent state exactly mapped to `localStorage` keys `balance` and `expenses`.
 
-## 🤝 Contributing
-
-Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
